@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         TextView text;
         text = findViewById(R.id.text);
         text.setOnClickListener(new View.OnClickListener() {
+            int count = 0;
             @Override
             public void onClick(View v) {
                 // Your logic here, e.g.:
-                text.setText("Oh, yea, I’ve been clicked!\n");
+                count++;
+                text.setText("This is a click number:" + count + "\n");
             }
         });
 
