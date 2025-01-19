@@ -28,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 // Your logic here, e.g.:
                 count++;
                 text.setText("This is a click number:" + count + "\n");
+                if (count==6){
+                    text.setText("Enough to click. Go to new start!" + "\n");
+                }
+
+
             }
         });
 
