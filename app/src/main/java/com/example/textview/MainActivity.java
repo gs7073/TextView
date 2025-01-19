@@ -27,16 +27,37 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Your logic here, e.g.:
                 count++;
-                text.setText("This is a click number:" + count + "\n");
-                if (count==6){
-                    text.setText("Enough to click. Go to new start!" + "\n");
+
+                if (count%7==0) {
+                    text.setText("Boom!\n");
+                }
+                else if(count>=10){
+                    int temp=count;
+                    boolean found=false;
+                    while (temp>0) {
+                        if (temp % 10 == 7) {
+                            found=true;
+                            break;
+                        }
+                        temp /= 10;
+
+                    }
+                    if(found){
+                        text.setText(" Boom!\n");
+                    }
+                    else{
+                        text.setText("This is a click number:" + count + "\n");
+                    }
+
+
+                }
+                else{
+                    text.setText("This is a click number:" + count + "\n");
                 }
 
-
             }
+
+
         });
-
-
     };
-    }
-
+}
